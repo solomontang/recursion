@@ -8,12 +8,12 @@ var getElementsByClassName = function(className){
   var results= [];
   var body = document.body;
 
-  var findNode = function(node)  {
-    if(node.classList && node.classList.contains(className))  {
-      results.push(node);
+  var findNode = function(element)  {
+    if(element.classList && element.classList.contains(className))  {
+      results.push(element);
     }
-    if(node.childNodes) {
-      node.childNodes.forEach(function(child) {
+    if(element.childNodes) {
+      element.childNodes.forEach(function(child) {
         findNode(child);
       });
     }
